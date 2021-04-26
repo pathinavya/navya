@@ -1,15 +1,10 @@
 provider "aws" {
 region = "us_east_1"
-access_key = "AKIARYCWJKV22I4BD462"
-secret_key = "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"
+access_key = "AKIARYCWJKV2WNEC36FV"
+secret_key = "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"
 }
-resource "aws_elasticache_cluster" "navyapathi" {
-cluster_id = "navya12"
-engine = "redis"
-node_type = "cache.t2.micro"
-num_cache_nodes = "1"
-parameter_group_name = "default.redis3.2"
-engine_version = "3.2.10"
-port = "6379"
-}
+resource "aws_s3_bucket" "navyapathi" {
+bucket = "navya0987"
+acl = "private"
+  }
 
